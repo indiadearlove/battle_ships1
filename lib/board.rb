@@ -22,9 +22,7 @@ attr_writer :ship_area
   end
 
   def horizontal(ship, coordinates)
-    puts @ship_area
     n = ship.ship_area
-    puts n
     n.times do 
       place_ship(coordinates)
       coordinates = coordinates.next

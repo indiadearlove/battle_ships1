@@ -11,7 +11,7 @@ describe 'Ship' do
 
   it "should have a name" do
     ship.aircraft_carrier
-    expect(ship.name).to eq('aircraft_carrier')
+    expect(ship.name).to eq(:aircraft_carrier)
   end
 
   it "should know its individual size" do
