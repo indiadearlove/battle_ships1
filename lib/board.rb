@@ -1,13 +1,10 @@
 require_relative = 'cell.rb'
-
+require_relative = 'ship.rb'
 
 class Board
 
 attr_reader :grid
-
-  def exsist
-    true
-  end
+attr_writer :ship_area
 
   def default_grid
     letters = ('A'..'J').to_a
@@ -22,6 +19,16 @@ attr_reader :grid
 
   def place_ship(coordinates)
     grid[coordinates].contain_ship
+  end
+
+  def horizontal(ship, coordinates)
+    puts @ship_area
+    n = ship.ship_area
+    puts n
+    n.times do 
+      place_ship(coordinates)
+      coordinates = coordinates.next
+    end
   end
 
 end
