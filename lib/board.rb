@@ -29,4 +29,12 @@ attr_writer :ship_area
     end
   end
 
+  def vertical(ship, coordinates)
+    n = ship.ship_area
+    n.times do
+      place_ship(coordinates)
+      coordinates = coordinates.reverse.next.reverse
+    end
+  end
+
 end

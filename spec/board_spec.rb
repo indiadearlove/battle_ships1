@@ -28,4 +28,12 @@ describe Board do
     expect(board.grid["A6"].empty?).to eq(:empty)
   end
 
+  it 'should be able to place a ship vertically' do
+    ship.aircraft_carrier
+    board.vertical(ship, "A1")
+    expect(board.grid["A1"].empty?).to eq(:not_empty)
+    expect(board.grid["B1"].empty?).to eq(:not_empty)
+    expect(board.grid["F1"].empty?).to eq(:empty)
+  end
+
 end
