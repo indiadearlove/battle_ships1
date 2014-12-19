@@ -1,7 +1,5 @@
 class Ship
 
-  attr_writer :ship_area
-
   def ship_area
     @ship_area
   end

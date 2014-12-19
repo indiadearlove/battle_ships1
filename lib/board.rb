@@ -4,7 +4,6 @@ require_relative = 'ship.rb'
 class Board
 
 attr_reader :grid
-attr_writer :ship_area
 
   def default_grid
     letters = ('A'..'J').to_a
